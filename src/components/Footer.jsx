@@ -1,23 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
+import { ensureConfig } from '@edx/frontend-platform';
+import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 
-import messages from './Footer.messages';
-import LanguageSelector from './LanguageSelector';
+import facebookIcon from './facebook.png';
+import xIcon from './x.png';
+import instagramIcon from './instagram.png';
+import linkedinIcon from './linkedin.png';
+import youtubeIcon from './youtube.png';
+import tiktokIcon from './tiktok.png';
+import snapchatIcon from './snapchat.png';
+import logo from './sbmf-logo.png';
 
-ensureConfig([
-  'LMS_BASE_URL',
-  'LOGO_TRADEMARK_URL',
-], 'Footer component');
+import './_footer.scss';
+
+ensureConfig(['LMS_BASE_URL'], 'Footer component');
 
 const EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link',
 };
 
-class SiteFooter extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.externalLinkClickHandler = this.externalLinkClickHandler.bind(this);
@@ -34,62 +37,72 @@ class SiteFooter extends React.Component {
   }
 
   render() {
-    const {
-      supportedLanguages,
-      onLanguageSelected,
-      logo,
-      intl,
-    } = this.props;
-    const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
 
     return (
-      <footer
-        role="contentinfo"
-        className="footer d-flex border-top py-3 px-4"
-      >
-        <div className="container-fluid d-flex">
-          <a
-            className="d-block"
-            href={config.LMS_BASE_URL}
-            aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
-          >
-            <img
-              style={{ maxHeight: 45 }}
-              src={logo || config.LOGO_TRADEMARK_URL}
-              alt={intl.formatMessage(messages['footer.logo.altText'])}
-            />
-          </a>
-          <div className="flex-grow-1" />
-          {showLanguageSelector && (
-            <LanguageSelector
-              options={supportedLanguages}
-              onSubmit={onLanguageSelected}
-            />
-          )}
+      <footer className="footer-arabic" dir="rtl">
+        <div className="footer-container">
+
+          {/* === Top Section === */}
+          <div className="footer-top">
+            <div className="footer-links-top">
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>الأسئلة الشائعة</a>
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>تواصل معنا</a>
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>البريد الإلكتروني</a>
+            </div>
+
+            <div className="footer-social">
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={facebookIcon} alt="Facebook" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={xIcon} alt="X" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={youtubeIcon} alt="YouTube" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={linkedinIcon} alt="LinkedIn" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokIcon} alt="TikTok" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={snapchatIcon} alt="Snapchat" /></a>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="footer-divider" />
+
+          {/* === Bottom Section === */}
+      <div className="footer-bottom">
+  <div className="footer-brand">
+    <div className="footer-title">
+      <h2>مهارات المستقبل</h2>
+    </div>
+    <img src={logo} alt="Logo" className="footer-logo" />
+  </div>
+
+  <div className="footer-links-bottom">
+    <a
+      href={`${config.LMS_BASE_URL}/privacy`}
+      className="footer-link"
+      onClick={this.externalLinkClickHandler}
+    >
+      سياسة الخصوصية
+    </a>
+    <a
+      href={`${config.LMS_BASE_URL}/tos`}
+      className="footer-link"
+      onClick={this.externalLinkClickHandler}
+    >
+      شروط الخدمة
+    </a>
+  </div>
+</div>
+
+          {/* Copyright */}
+          <div className="footer-copy">
+            <p>معلومات حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية ©</p>
+          </div>
+
         </div>
       </footer>
     );
   }
 }
 
-SiteFooter.contextType = AppContext;
-
-SiteFooter.propTypes = {
-  intl: intlShape.isRequired,
-  logo: PropTypes.string,
-  onLanguageSelected: PropTypes.func,
-  supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-  })),
-};
-
-SiteFooter.defaultProps = {
-  logo: undefined,
-  onLanguageSelected: undefined,
-  supportedLanguages: [],
-};
-
-export default injectIntl(SiteFooter);
+Footer.contextType = AppContext;
+export default Footer;
 export { EVENT_NAMES };

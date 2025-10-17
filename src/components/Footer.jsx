@@ -12,7 +12,7 @@ import tiktokIcon from './tiktok.png';
 import snapchatIcon from './snapchat.png';
 import logo from './sbmf-logo.png';
 
-import './_footer.scss';
+import '../_footer.scss';
 
 ensureConfig(['LMS_BASE_URL'], 'Footer component');
 

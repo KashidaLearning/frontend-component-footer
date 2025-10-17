@@ -23,7 +23,7 @@ import youtubeIcon from './youtube.png';
 import tiktokIcon from './tiktok.png';
 import snapchatIcon from './snapchat.png';
 import logo from './sbmf-logo.png';
-import './_footer.scss';
+import '../_footer.scss';
 ensureConfig(['LMS_BASE_URL'], 'Footer component');
 var EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link'

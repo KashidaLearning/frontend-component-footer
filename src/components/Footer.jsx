@@ -45,36 +45,14 @@ class Footer extends React.Component {
 
           {/* === Top Section === */}
           <div className="footer-top">
-            <div className="footer-links-top">
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>الأسئلة الشائعة</a>
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>تواصل معنا</a>
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>البريد الإلكتروني</a>
-            </div>
-
-            <div className="footer-social">
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={facebookIcon} alt="Facebook" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={xIcon} alt="X" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={youtubeIcon} alt="YouTube" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={linkedinIcon} alt="LinkedIn" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokIcon} alt="TikTok" /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><img src={snapchatIcon} alt="Snapchat" /></a>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="footer-divider" />
-
-          {/* === Bottom Section === */}
-      <div className="footer-bottom">
-  <div className="footer-brand">
+             <div className="footer-brand">
     <div className="footer-title">
       <h2>مهارات المستقبل</h2>
     </div>
     <img src={logo} alt="Logo" className="footer-logo" />
   </div>
 
-  <div className="footer-links-bottom">
+  <div className="footer-links-top">
     <a
       href={`${config.LMS_BASE_URL}/privacy`}
       className="footer-link"
@@ -90,6 +68,30 @@ class Footer extends React.Component {
       شروط الخدمة
     </a>
   </div>
+          </div>
+
+          {/* Divider */}
+          <div className="footer-divider" />
+
+          {/* === Bottom Section === */}
+      <div className="footer-bottom">
+
+        <div className="footer-links-bottom">
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>الأسئلة الشائعة</a>
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>تواصل معنا</a>
+              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>البريد الإلكتروني</a>
+            </div>
+
+            <div className="footer-social">
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={facebookIcon} alt="Facebook" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={xIcon} alt="X" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={youtubeIcon} alt="YouTube" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={linkedinIcon} alt="LinkedIn" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokIcon} alt="TikTok" /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><img src={snapchatIcon} alt="Snapchat" /></a>
+            </div>
+ 
 </div>
 
           {/* Copyright */}

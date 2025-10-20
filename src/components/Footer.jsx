@@ -48,7 +48,6 @@ class Footer extends React.Component {
             <div className="footer-brand">
               <div className="footer-title">
                 <h2>مهارات المستقبل</h2>
-                <p>مؤسسة سالم بن محفوظ الأهلية<br />Salem Bin Mahfouz Foundation</p>
               </div>
               <img src={logo} alt="Logo" className="footer-logo" />
             </div>

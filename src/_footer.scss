@@ -1,12 +1,12 @@
 .footer-arabic {
-  background-color: #2b2a88;
+  background-color: #110D7C;
   color: #ffffff;
   padding: 24px 0;
   font-family: "Noto Sans Arabic", sans-serif;
   text-align: right;
 
   .footer-container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 32px;
     display: flex;
@@ -98,8 +98,6 @@
       img {
         width: 32px;
         height: 32px;
-        border: 1px solid white;
-        border-radius: 6px;
         padding: 4px;
         transition: all 0.3s ease;
 

@@ -10,7 +10,7 @@ import linkedinIcon from './linkedin.png';
 import youtubeIcon from './youtube.png';
 import tiktokIcon from './tiktok.png';
 import snapchatIcon from './snapchat.png';
-import logo from './logo.png';
+import logo from './sbmf-logo.png';
 
 import '../_footer.scss'; // Correct relative path
 

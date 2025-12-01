@@ -59,12 +59,10 @@ class Footer extends React.Component {
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="footer-divider" />
-
           {/* === Bottom Section === */}
           <div className="footer-bottom">
             <div className="footer-links-bottom">
+               <p className="footer-copy">معلومات حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية </p>
               <a href={`${config.LMS_BASE_URL}/privacy`} className="footer-link" onClick={this.externalLinkClickHandler}>سياسة الخصوصية</a>
               <a href={`${config.LMS_BASE_URL}/tos`} className="footer-link" onClick={this.externalLinkClickHandler}>شروط الخدمة</a>
             </div>
@@ -78,11 +76,6 @@ class Footer extends React.Component {
               <a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokIcon} alt="TikTok" /></a>
               <a href="#" target="_blank" rel="noopener noreferrer"><img src={snapchatIcon} alt="Snapchat" /></a>
             </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="footer-copy">
-            <p>معلومات حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية ©</p>
           </div>
         </div>
       </footer>

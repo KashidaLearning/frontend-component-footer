@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+.footer-arabic {
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+}
+
 .footer-arabic {
   background-color: #110D7C;
   color: #ffffff;
@@ -112,7 +118,7 @@
   }
 
   // === Responsive ===
-  @media (max-width: 768px) {
+  @media (max-width: 991.98px) {
     .footer-top,
     .footer-bottom {
       flex-direction: column;
@@ -133,3 +139,17 @@
     }
   }
 }
+
+@media (max-width: 991.98px) {
+ .footer-arabic .footer-top .footer-links-top {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .footer-arabic .footer-bottom .footer-links-bottom {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+

@@ -62,7 +62,7 @@ class Footer extends React.Component {
           {/* === Bottom Section === */}
           <div className="footer-bottom">
             <div className="footer-links-bottom">
-               <p className="footer-copy">معلومات حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية </p>
+               <p className="footer-copy"> حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية</p>
               <a href={`${config.LMS_BASE_URL}/privacy`} className="footer-link" onClick={this.externalLinkClickHandler}>سياسة الخصوصية</a>
               <a href={`${config.LMS_BASE_URL}/tos`} className="footer-link" onClick={this.externalLinkClickHandler}>شروط الخدمة</a>
             </div>

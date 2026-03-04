@@ -53,9 +53,9 @@ class Footer extends React.Component {
             </div>
 
             <div className="footer-links-top">
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>الأسئلة الشائعة</a>
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>تواصل معنا</a>
-              <a href="#" className="footer-link" onClick={this.externalLinkClickHandler}>البريد الإلكتروني</a>
+              <a href="https://f-skills.com/%d8%a3%d8%b3%d8%a6%d9%84%d8%a9-%d9%88%d8%a3%d8%ac%d9%88%d8%a8%d8%a9/" className="footer-link" onClick={this.externalLinkClickHandler}>الأسئلة الشائعة</a>
+              <a href="https://f-skills.com/%d8%aa%d9%88%d8%a7%d8%b5%d9%84-%d9%85%d8%b9%d9%86%d8%a7-2/" className="footer-link" onClick={this.externalLinkClickHandler}>تواصل معنا</a>
+              <a href="mailto:fsplatform@sbmf.org.sa" className="footer-link" onClick={this.externalLinkClickHandler}>البريد الإلكتروني</a>
             </div>
           </div>
 
@@ -63,8 +63,8 @@ class Footer extends React.Component {
           <div className="footer-bottom">
             <div className="footer-links-bottom">
                <p className="footer-copy"> حقوق النشر تعود لمؤسسة سالم بن محفوظ الأهلية</p>
-              <a href={`${config.LMS_BASE_URL}/privacy`} className="footer-link" onClick={this.externalLinkClickHandler}>سياسة الخصوصية</a>
-              <a href={`${config.LMS_BASE_URL}/tos`} className="footer-link" onClick={this.externalLinkClickHandler}>شروط الخدمة</a>
+              <a href="https://f-skills.com/%d8%b3%d9%8a%d8%a7%d8%b3%d8%a9-%d8%a7%d9%84%d8%ae%d8%b5%d9%88%d8%b5%d9%8a%d8%a9/" className="footer-link" onClick={this.externalLinkClickHandler}>سياسة الخصوصية</a>
+              <a href="https://f-skills.com/%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a9/" className="footer-link" onClick={this.externalLinkClickHandler}>شروط الخدمة</a>
             </div>
 
             <div className="footer-social">

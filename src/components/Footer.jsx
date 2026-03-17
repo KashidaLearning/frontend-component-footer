@@ -1,20 +1,26 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 
+import facebookIcon from './facebook.png';
+import xIcon from './x.png';
+import instagramIcon from './instagram.png';
+import youtubeIcon from './youtube.png';
+import linkedinIcon from './linkedin.png';
+import tiktokIcon from './tiktok.png';
+import snapchatIcon from './snapchat.png';
+
 ensureConfig([
   'LMS_BASE_URL',
-  'LOGO_TRADEMARK_URL',
 ], 'Footer component');
 
 const EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link',
 };
 
-const SiteFooter = ({ logo }) => {
+const SiteFooter = () => {
   const intl = useIntl();
   const { config } = useContext(AppContext);
 
@@ -25,6 +31,16 @@ const SiteFooter = ({ logo }) => {
       label,
     });
   };
+
+  const socialLinks = [
+    { href: 'https://facebook.com', icon: facebookIcon, alt: 'Facebook' },
+    { href: 'https://x.com', icon: xIcon, alt: 'X' },
+    { href: 'https://instagram.com', icon: instagramIcon, alt: 'Instagram' },
+    { href: 'https://youtube.com', icon: youtubeIcon, alt: 'YouTube' },
+    { href: 'https://linkedin.com', icon: linkedinIcon, alt: 'LinkedIn' },
+    { href: 'https://tiktok.com', icon: tiktokIcon, alt: 'TikTok' },
+    { href: 'https://snapchat.com', icon: snapchatIcon, alt: 'Snapchat' },
+  ];
 
   return (
     <div className="custom-footer">
@@ -57,35 +73,23 @@ const SiteFooter = ({ logo }) => {
           </a>
         </nav>
 
-        <div className="footer-logo">
-          <a
-            href={`${config.LMS_BASE_URL}/dashboard`}
-            aria-label={intl.formatMessage({
-              id: 'footer.logo.ariaLabel',
-              defaultMessage: 'Karaneef',
-            })}
-            onClick={externalLinkClickHandler}
-          >
-            <img
-              src={logo || config.LOGO_TRADEMARK_URL}
-              alt={intl.formatMessage({
-                id: 'footer.logo.altText',
-                defaultMessage: 'Karaneef',
-              })}
-            />
-          </a>
+        <div className="footer-social">
+          {socialLinks.map((item) => (
+            <a
+              key={item.alt}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.alt}
+              onClick={externalLinkClickHandler}
+            >
+              <img src={item.icon} alt={item.alt} />
+            </a>
+          ))}
         </div>
       </footer>
     </div>
   );
-};
-
-SiteFooter.propTypes = {
-  logo: PropTypes.string,
-};
-
-SiteFooter.defaultProps = {
-  logo: undefined,
 };
 
 export default SiteFooter;

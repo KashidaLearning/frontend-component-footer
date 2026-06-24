@@ -15,13 +15,6 @@ import React from 'react';
 import { AppContext } from '@edx/frontend-platform/react';
 import { ensureConfig } from '@edx/frontend-platform';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
-import facebookIcon from './facebook.png';
-import xIcon from './x.png';
-import instagramIcon from './instagram.png';
-import linkedinIcon from './linkedin.png';
-import youtubeIcon from './youtube.png';
-import tiktokIcon from './tiktok.png';
-import snapchatIcon from './snapchat.png';
 import logo from './sbmf-logo.png';
 import '../_footer.scss'; // Correct relative path
 
@@ -96,58 +89,7 @@ var Footer = /*#__PURE__*/function (_React$Component) {
         href: "https://f-skills.com/%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a9/",
         className: "footer-link",
         onClick: this.externalLinkClickHandler
-      }, "\u0634\u0631\u0648\u0637 \u0627\u0644\u062E\u062F\u0645\u0629")), /*#__PURE__*/React.createElement("div", {
-        className: "footer-social"
-      }, /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: facebookIcon,
-        alt: "Facebook"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: xIcon,
-        alt: "X"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: instagramIcon,
-        alt: "Instagram"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: youtubeIcon,
-        alt: "YouTube"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: linkedinIcon,
-        alt: "LinkedIn"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: tiktokIcon,
-        alt: "TikTok"
-      })), /*#__PURE__*/React.createElement("a", {
-        href: "#",
-        target: "_blank",
-        rel: "noopener noreferrer"
-      }, /*#__PURE__*/React.createElement("img", {
-        src: snapchatIcon,
-        alt: "Snapchat"
-      }))))));
+            }, "\u0634\u0631\u0648\u0637 \u0627\u0644\u062E\u062F\u0645\u0629")))));
     }
   }]);
 }(React.Component);

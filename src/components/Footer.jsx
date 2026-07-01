@@ -53,25 +53,37 @@ const SiteFooter = () => {
         })}
       >
         <nav
-          className="footer-nav"
-          aria-label={intl.formatMessage({
-            id: 'footer.links.ariaLabel',
-            defaultMessage: 'Footer links',
-          })}
-        >
-          <a href={`${config.LMS_BASE_URL}/tos`} onClick={externalLinkClickHandler}>
-            Terms of Service
-          </a>
-          <a href={`${config.LMS_BASE_URL}/privacy`} onClick={externalLinkClickHandler}>
-            Privacy Policy
-          </a>
-          <a href={`${config.LMS_BASE_URL}/contact`} onClick={externalLinkClickHandler}>
-            Contact Us
-          </a>
-          <a href={`${config.LMS_BASE_URL}/faq`} onClick={externalLinkClickHandler}>
-            FAQ
-          </a>
-        </nav>
+  className="footer-nav"
+  aria-label={intl.formatMessage({
+    id: 'footer.links.ariaLabel',
+    defaultMessage: 'Footer links',
+  })}
+>
+  <a href={`${config.LMS_BASE_URL}/tos`} onClick={externalLinkClickHandler}>
+    {intl.formatMessage({
+      id: 'footer.links.tos',
+      defaultMessage: 'Terms of Service',
+    })}
+  </a>
+  <a href={`${config.LMS_BASE_URL}/privacy`} onClick={externalLinkClickHandler}>
+    {intl.formatMessage({
+      id: 'footer.links.privacy',
+      defaultMessage: 'Privacy Policy',
+    })}
+  </a>
+  <a href={`${config.LMS_BASE_URL}/contact`} onClick={externalLinkClickHandler}>
+    {intl.formatMessage({
+      id: 'footer.links.contact',
+      defaultMessage: 'Contact Us',
+    })}
+  </a>
+  <a href={`${config.LMS_BASE_URL}/faq`} onClick={externalLinkClickHandler}>
+    {intl.formatMessage({
+      id: 'footer.links.faq',
+      defaultMessage: 'FAQ',
+    })}
+  </a>
+</nav>
 
         <div className="footer-social">
           {socialLinks.map((item) => (

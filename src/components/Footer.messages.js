@@ -151,6 +151,27 @@ const messages = defineMessages({
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
   },
+
+   'footer.links.tos': {
+    id: 'footer.links.tos',
+    defaultMessage: 'Terms of Service',
+    description: 'Footer link text for Terms of Service page',
+  },
+  'footer.links.privacy': {
+    id: 'footer.links.privacy',
+    defaultMessage: 'Privacy Policy',
+    description: 'Footer link text for Privacy Policy page',
+  },
+  'footer.links.contact': {
+    id: 'footer.links.contact',
+    defaultMessage: 'Contact Us',
+    description: 'Footer link text for Contact Us page',
+  },
+  'footer.links.faq': {
+    id: 'footer.links.faq',
+    defaultMessage: 'FAQ',
+    description: 'Footer link text for FAQ page',
+  },
 });
 
 export default messages;

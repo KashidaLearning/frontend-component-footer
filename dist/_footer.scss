@@ -1,0 +1,115 @@
+.custom-footer {
+  background: #0A2940;
+  width: 100%;
+}
+
+.custom-footer .footer-inner {
+  max-width: 1440px;
+  min-height: 162px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.custom-footer .footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.custom-footer .footer-nav a {
+  color: #FCF0DE !important;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.custom-footer .footer-nav a:hover,
+.custom-footer .footer-nav a:focus {
+  text-decoration: underline;
+}
+
+.custom-footer .footer-social {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.custom-footer .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-footer .footer-social img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.custom-footer .footer-social a:hover img,
+.custom-footer .footer-social a:focus img {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .custom-footer .footer-inner {
+    padding: 24px 40px;
+  }
+
+  .custom-footer .footer-nav {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-footer .footer-inner {
+    min-height: auto;
+    padding: 24px 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .custom-footer .footer-nav {
+    gap: 16px 24px;
+    flex-direction: column;
+  }
+
+  .custom-footer .footer-social {
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800; // variable range
+  font-style: normal;
+  font-display: swap;
+}
+
+//Font overrides
+html, body {
+  font-family: 'Manrope' !important;
+}
+h1, h2, h3, h4, h5, h6, span, a, p, li {
+  font-family: 'Manrope'!important;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit !important;
+}
